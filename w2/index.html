@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        h1 { 
+            font-family: Arial, sans-serif;
+            color: chocolate;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2, h3 { 
+            font-family: Arial, sans-serif;
+            color: black;
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #132b24;
+
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) { /* desktop navbar */
+            .sidebar {
+                height: 100vh;
+
+            }
+
+            .sidebar-image {
+                display: block;
+            }
+
+            .content {
+                margin-left: 250px;
+                max-width: calc(100% - 250px);
+                justify-content: center;
+            }
+            
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+
+            .nav a {
+                display: block;
+                color: #e0ccb8;
+                font-weight: bolder;
+                padding: 15px;
+                text-decoration: none;
+                font-size: large;
+                justify-content: center;
+                background-color: #407957;
+                border-top: 1px solid #000000;
+            }
+
+            .nav a:hover {
+                background-color: #e0ccb8;
+                color: #502f10;
+                font-size: larger;
+                font-weight: bolder;
+                border: 1px solid #000000;
+            }
+
+        }
+        
+        @media (max-width: 767px) { /* mobile navbar */
+            .sidebar {
+                position: relative;
+                height: auto;
+                width: 100%;
+                margin: 0;
+            }
+
+            .sidebar-image {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .nav {
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav a {
+                display: block;
+                color: #e0ccb8;
+                font-weight: bolder;
+                text-decoration: none;
+                font-size: large;
+                justify-content: center;
+                background-color: #407957;
+                border: 1px solid #000000;
+
+            }
+
+            .nav a:hover {
+                background-color: #e0ccb8;
+                color: #502f10;
+                font-size: larger;
+                font-weight: bolder;
+                border: 1px solid #000000;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="sidebar">
+        <img src="wpage_img1.jpg" alt="Image of a tree" width="100%" class="sidebar-image">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Main Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="hobbies.html">Hobbies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content container-fluid">
+        <h1>Main Page</h1>
+        <img src="wpage_img3.jpg" alt="Image of a tree" height="200px" class="img-fluid">
+
+        <h2>About me</h2>
+            
+        <h3>Name</h3>
+        <p class="myClass">Peter Pine</p>
+
+        <h3>Description</h3>
+        <p>Hi friends, both botanic and of others! I'm a tree as you might see. In case you were unaware,</p>
+        <p>but we trees also have feelings so it's important for you humans to care for us.</p>
+        <p>Delve deeper into my life by visiting the various pages on this website of mine!</p>
+
+        <h3>Socials</h3>
+        <p><a href="mailto:ppine@barkmail.com">Send Email</a></p>
+        <p>I have no social media; those pesky humans won't let us trees get a mobile plan!</p>
+    </div>
+
+</body>
+</html>
