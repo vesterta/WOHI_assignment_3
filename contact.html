@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        h1 { 
+            font-family: Arial, sans-serif;
+            color: chocolate;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2, h3 { 
+            font-family: Arial, sans-serif;
+            color: rgb(8, 7, 7);
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #132b24;
+
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) { /* desktop navbar */
+            .sidebar {
+                height: 100vh;
+
+            }
+
+            .sidebar-image {
+                display: block;
+            }
+
+            .content {
+                margin-left: 250px;
+                max-width: calc(100% - 250px);
+                justify-content: center;
+            }
+            
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+
+            .nav a {
+                display: block;
+                color: #e0ccb8;
+                font-weight: bolder;
+                padding: 15px;
+                text-decoration: none;
+                font-size: large;
+                justify-content: center;
+                background-color: #407957;
+                border-top: 1px solid #000000;
+            }
+
+            .nav a:hover {
+                background-color: #e0ccb8;
+                color: #502f10;
+                font-size: larger;
+                font-weight: bolder;
+                border: 1px solid #000000;
+            }
+
+        }
+        
+        @media (max-width: 767px) { /* mobile navbar */
+            .sidebar {
+                position: relative;
+                height: auto;
+                width: 100%;
+                margin: 0;
+            }
+
+            .sidebar-image {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .nav {
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav a {
+                display: block;
+                color: #e0ccb8;
+                font-weight: bolder;
+                text-decoration: none;
+                font-size: large;
+                justify-content: center;
+                background-color: #407957;
+                border: 1px solid #000000;
+
+            }
+
+            .nav a:hover {
+                background-color: #e0ccb8;
+                color: #502f10;
+                font-size: larger;
+                font-weight: bolder;
+                border: 1px solid #000000;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <img src="wpage_img1.jpg" alt="Image of a tree" width="100%" class="sidebar-image">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Main Page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="hobbies.html">Hobbies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content container-fluid">
+        <h1>Contact me</h1>
+        
+        <h2>Contact form</h2>
+        <form action="/submit" method="POST">
+            <label for="textInput">Name:</label><br>
+            <input type="text" class="form-control" id="textInput" name="textInput" required>
+            <br><br>
+
+            <label for="numberInput">Age:</label><br>
+            <input type="number" class="form-control" id="numberInput" name="numberInput" required>
+            <br><br>
+
+            <label for="emailInput">Email:</label><br>
+            <input type="email" class="form-control" id="emailInput" name="emailInput" required>
+            <br><br>
+
+            <label for="textArea">Message:</label><br>
+            <textarea id="textArea" class="form-control" name="textArea" rows="4" cols="50" required></textarea>
+            <br><br>
+
+            <label>How did you find out about my page?</label>
+            <br>
+            <input type="radio" id="c1" name="findoutChoice" value="c1">
+            <label for="c1">Google</label>
+            <br>
+            <input type="radio" id="c2" name="findoutChoice" value="c2">
+            <label for="c2">Friend</label>
+            <br>
+            <input type="radio" id="c3" name="findoutChoice" value="c3">
+            <label for="c3">LinkedIn</label>
+            <br>
+            <input type="radio" id="c4" name="findoutChoice" value="c4">
+            <label for="c3">Other</label>
+            <br><br>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
